@@ -1,6 +1,6 @@
 <h2>Chat Rooms</h2>
     <div class="listRooms">
-        <ul class="rooms" ng-repeat="room in home.rooms">
-            <li class="roomName">{{room.name+1}}</li>
+        <ul class="rooms" ng-repeat="room in home.rooms track by $index">
+            <li class="roomName">{{$index+1}}</li>
         </ul>
         </div>
