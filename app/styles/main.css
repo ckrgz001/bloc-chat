@@ -2,7 +2,7 @@ html, body, h1, h2, h3, h4, p, div, ol, ul, li {
   padding: 0;
   border: 0;
   margin: 0;
-  font: inherit;
+  font-family: : inherit;
   font-size: 100%;
 }
 
@@ -10,8 +10,9 @@ html, body, h1, h2, h3, h4, p, div, ol, ul, li {
 h1 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 50px;
-    font-weight: bold;
-    text-align: center;
+    font-weight: 100;
+    margin: 0 auto 0 auto;
+
 }
 
 h2 {
@@ -25,6 +26,7 @@ h2 {
 
 .header {
   background-color: #999999;
+  padding: 20px 0 20px 20px;
 }
 
 .tagline {

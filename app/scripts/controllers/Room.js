@@ -9,6 +9,8 @@
     return Room;
   }
 
+
+
   angular
     .module('bloc-chat')
     .factory('Room', ['$firebaseArray', Room]);
