@@ -1,11 +1,10 @@
 (function() {
     function HomeCtrl(Room) {
         this.rooms = Room.all;
-        this.create = function(shinroomName){
-            Room.create(shinroomName);
+        this.add = Room.add();
 
-        };
-    }
+
+    };
 
     angular
         .module('bloc-chat')
