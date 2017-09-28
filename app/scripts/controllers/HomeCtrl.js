@@ -1,8 +1,11 @@
 (function() {
     function HomeCtrl(Room) {
         this.rooms = Room.all;
-        this.add = function(roomName){
-            Room.add(roomName);
+        this.room = "which room";
+        this.add = function(){
+            Room.add(this.room);
+            console.log("rooms");
+            console.log(this.rooms);
         };
 
 

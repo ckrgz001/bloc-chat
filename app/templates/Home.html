@@ -4,7 +4,7 @@
 <div class="tagline">
     <h2>Chat Rooms</h2>
 </div>
-    <button class="btn btn-primary btn-sm pull-right" data-target"#creatRoom" data-toggle="modal">Create Rooms</button>
+    <button class="btn btn-primary btn-sm pull-right" data-target"#createRoom" data-toggle="modal">Create Rooms</button>
     <div class="modal" id="createRoom" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -13,15 +13,16 @@
                     <h4 class="modal-title">Create New Chatroom</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form ng-submit="home.add()">
                         <div class="form-group">
                             <label for="inputRoomName">Room Name</label>
-                            <input class="form-control" placeholder="Type Room Name" type="text" id="inputRoomName">
+                            <input class="form-control" ng-model="home.room" placeholder="Type Room Name" type="text" id="inputRoomName">
+                            <input type="submit" id="submit" value="Submit" />
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" ng-click="home.add(roomName)">Create New Chatroom</button>
+
                     <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
@@ -29,6 +30,6 @@
     </div>
     <div class="listRooms">
         <ul class="rooms" ng-repeat="room in home.rooms">
-            <li class="roomName">{{room.$value}}</li>
+            <li class="roomName">{{room.room}}</li>
         </ul>
     </div>
