@@ -4,8 +4,13 @@
 <div class="tagline">
     <h2>Chat Rooms</h2>
 </div>
+    <div class="modal-stuff">
+        <div class="modal-header">
+            <button type ="button" ng-click="home.add(roomName)">Create New Chatroom</button>
+        </div>
+    </div>
     <div class="listRooms">
         <ul class="rooms" ng-repeat="room in home.rooms">
             <li class="roomName">{{room.$value}}</li>
         </ul>
-        </div>
+    </div>
